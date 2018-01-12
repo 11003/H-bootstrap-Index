@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="js/setHomeSetFav.js" charset="gb2312"></script>
+	<style type="text/css">
+		body{padding-top: 75px;}
+		a:focus{outline: none}
+		.carousel{
+			max-height: 900px;
+			margin-bottom: 80px;
+			overflow: hidden;
+		}
+    #god{
+      width: 100%;
+      position: relative;
+    }
+    .navbar{
+      width: 100%;
+      background: url(logo1.png) #AD0D0D no-repeat;
+      opacity: 0.9;
+
+    }dropdown-menu
+    .only{
+      color: #fff;
+    }
+    .only:hover{
+      color: #000;
+    }
+		.carousel img{
+			min-width: 100%;
+		}
+    .navbar-collapse{
+      width:750px;
+      margin: 6px auto;
+    }
+    .dropdown-toggle{
+      color: #eee;
+    }
+    .dropdown:hover{
+      background-color:#AD0D0D; 
+    }
+    .nav>li:hover .dropdown-menu{
+      display: block;
+    }
+  
+    .glyphicon{
+      padding-right: 20px;
+    }
+    .texthover:hover a{
+      color: red;
+    }
+    .caption p a{
+      color: #201818;
+    }
+    .caption p a:hover{
+      color: #AD0D0D;
+    }
+    .gqstyle{
+      width: 860px;
+      height: 360px;
+      background:url(gq9.jpg) no-repeat 0 -210px;
+    }
+    footer{
+      width: 100%;
+      height: 100px;
+      background-color:#393626; 
+    }
+    .content{
+      width: 1210px;
+      height: 100px;
+      margin: 0 auto;
+      background: url(gq12.png) no-repeat  10px 20px;
+    }
+    .leftlogo{
+      width: 580px;
+      margin-top: 5px;
+      border-right: 1px solid #635040;
+      height: 90px;
+      padding-left:120px;
+      float: left;
+    }
+    .leftlogo h1,span{
+      color: #b09e83;
+    }
+    .rightlogo{
+      display: block;
+      margin-top: 5px;
+      width: 600px;
+      height: 100px;
+      float: right;
+      padding-left: 10px;
+    }
+    .rightlogo p,address{
+      font-size: 12px;
+      color: #b09e83;
+    }
+    marquee{
+  
+      line-height: 30px; 
+      color: red;
+      opacity: 0.6;
+      font-weight: bold;
+      position: absolute;
+      top: 50px;
+      z-index: 99;
+    }
+    .topcon{
+      background-color: #cbc5b5;
+      width: 150px;
+      margin-left: 800px;
+      text-align: center;
+    }
+    .topcon a{
+      color: #603734;
+    }
+    @media (max-width: 767px){
+      .rightlogo{
+        display: none;
+      }
+    }
+		@font-face {
+ 		font-family: 'Glyphicons Halflings';
+		}
+	</style>
+</head>
+<body>
+<div id="god">
+<nav class="navbar navbar-fixed-top" style="height: 78px;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<div class="topcon">
+<a href="#" onclick="SetHome(window.onload)">设为首页&nbsp;</a>
+<a href="#" onclick="AddFavorite(window.location,document.title)">|&nbsp;加入收藏</a>
+  </div>
+<li><a href="#" class="only">网站首页<span class="sr-only">(current)</span></a></li>
+   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">学校概况<span class="caret"></span></a>
+		<ul class="dropdown-menu" role="menu">
+            <li><a href="#feature-tab" data-tab="tab-chrome">学校简介</a></li>
+            <li><a href="#feature-tab" data-tab="tab-firefox">现任领导</a></li>
+            <div class="divider"></div>
+            <li><a href="#feature-tab" data-tab="tab-safari">办学历程</a></li>
+            <li><a href="#feature-tab" data-tab="tab-opera">专家治校</a></li>
+        </ul>
+   </li>
+   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">机构设置<span class="caret"></span></a>
+		<ul class="dropdown-menu" role="menu">
+            <li><a href="#feature-tab" data-tab="tab-chrome">通知公告</a></li>
+            <li><a href="#feature-tab" data-tab="tab-firefox">新闻动态</a></li>
+            <li><a href="#feature-tab" data-tab="tab-safari">新闻动态</a></li>
+            <div class="divider"></div>
+            <li><a href="#feature-tab" data-tab="tab-opera">最新新闻</a></li>
+            <li><a href="#feature-tab" data-tab="tab-opera">最新新闻</a></li>
+            <li><a href="#feature-tab" data-tab="tab-opera">最新新闻</a></li>
+        </ul>
+   </li>
+   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">新闻中心<span class="caret"></span></a>
+		<ul class="dropdown-menu" role="menu">
+            <li><a href="#feature-tab" data-tab="tab-chrome">通知公告</a></li>
+            <li><a href="#feature-tab" data-tab="tab-firefox">新闻动态</a></li>
+            <li><a href="#feature-tab" data-tab="tab-safari">新闻动态</a></li>
+            <div class="divider"></div>
+            <li><a href="#feature-tab" data-tab="tab-opera">最新新闻</a></li>
+        </ul>
+   </li>
+   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">教育教学<span class="caret"></span></a>
+		<ul class="dropdown-menu" role="menu">
+            <li><a href="#feature-tab" data-tab="tab-chrome">教学管理</a></li>
+            <li><a href="#feature-tab" data-tab="tab-firefox">科研管理</a></li>
+            <li><a href="#feature-tab" data-tab="tab-safari">人才培养</a></li>
+            <div class="divider"></div>
+            <li><a href="#feature-tab" data-tab="tab-opera">实训设施</a></li>
+            <li><a href="#feature-tab" data-tab="tab-ie">专业介绍</a></li>
+        </ul>
+   </li>
+   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">招生就业<span class="caret"></span></a>
+		<ul class="dropdown-menu" role="menu">
+            <li><a href="#feature-tab" data-tab="tab-chrome">政策导航</a></li>
+            <li><a href="#feature-tab" data-tab="tab-firefox">就业合作</a></li>
+            <li><a href="#feature-tab" data-tab="tab-safari">国际交流</a></li>
+        </ul>
+   </li>
+   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">校园生活<span class="caret"></span></a>
+		<ul class="dropdown-menu" role="menu">
+            <li><a href="#feature-tab" data-tab="tab-chrome">校园文化</a></li>
+            <li><a href="#feature-tab" data-tab="tab-firefox">军魂育人</a></li>
+            <li><a href="#feature-tab" data-tab="tab-safari">电子信箱</a></li>
+            <li><a href="#feature-tab" data-tab="tab-opera">服务指南</a></li>
+            <div class="divider"></div>
+            <li><a href="#feature-tab" data-tab="tab-chrome">网上报名</a></li>
+            <li><a href="#feature-tab" data-tab="tab-firefox">录取查询</a></li>
+        </ul>
+   </li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</nav>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators" style="margin-bottom: -18px">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+  </ol>
+  <a href="#"><marquee bgcolor="#F3E6E6" width="100%" direction="left">我校工程学院学生参加第四届世界咏春大赛喜获银牌， 我校学生在省级大赛中获大奖， 我院学生在2017年江西省大学生田径比赛中勇创佳绩， 我校航海学院在第四届中国海员技能大比武中勇夺桂冠， 我院参加第七届华东区大学生CAD应用技能竞赛喜获佳奖</marquee></a>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner img-responsive" role="listbox">
+    <div class="item active">
+      <img src="gq1.jpg" alt="...">
+      <div class="carousel-caption">
+        <h3>春花</h3>
+   		<p>This delay is necessary for these browsers to correctly handle “double-tap to zoom</p>
+  </div>  
+    </div>
+    <div class="item">
+      <img src="gq2.jpg" alt="...">
+      <div class="carousel-caption">
+      	<h3>教官队</h3>
+   		<p>To address this problem in IE11 and Microsoft Edge on desktop, as well as IE11 on Windows Phone 8.1</p>
+      </div>
+    </div>
+	<div class="item">
+      <img src="gq3.jpg" alt="...">
+      <div class="carousel-caption">
+      	<h3>航海系</h3>
+   		<p>To address this problem in IE11 and Microsoft Edge on desktop, as well as IE11 on Windows Phone 8.1</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="gq4.jpg" alt="...">
+      <div class="carousel-caption">
+      	<h3>图书馆</h3>
+   		<p>To address this problem in IE11 and Microsoft Edge on desktop, as well as IE11 on Windows Phone 8.1</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="gq5.jpg" alt="...">
+      <div class="carousel-caption">
+      	<h3>梅花</h3>
+   		<p>To address this problem in IE11 and Microsoft Edge on desktop, as well as IE11 on Windows Phone 8.1</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="gq6.jpg" alt="...">
+      <div class="carousel-caption">
+        <h3>走廊</h3>
+      <p>To address this problem in IE11 and Microsoft Edge on desktop, as well as IE11 on Windows Phone 8.1</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="gq7.jpg" alt="...">
+      <div class="carousel-caption">
+        <h3>精彩演出</h3>
+      <p>To address this problem in IE11 and Microsoft Edge on desktop, as well as IE11 on Windows Phone 8.1</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="gq8.jpg" alt="...">
+      <div class="carousel-caption">
+        <h3>雪景</h3>
+      <p>To address this problem in IE11 and Microsoft Edge on desktop, as well as IE11 on Windows Phone 8.1</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container" style="margin-top: 45px;">
+	<div class="row">
+		<div class="col-sm-9">
+      <div class="page-header">
+      <h1>Hello, welcome!
+      <small>春和暖风的共科</small>
+    </h1>
+    <div class="img-rounded img-responsive gqstyle"><img src="xx.png"></div>
+    </div>
+			<div class="row">
+			  <div class="col-sm-6 col-md-6">
+			    <div class="thumbnail">
+			      <div class="caption">
+			        <h1>共科新闻</h1>
+              <br/>
+               <p><a href="#">[12-07] 高校党的十九大精神学习交流座谈会在共青科技职业学院举行</a></p>
+               <p><a href="#">[12-04] 我校师生在国际残疾人日举行爱心募捐并观看残疾人艺术团演出</a></p>
+               <p><a href="#">[12-03] 江西省委教育工委组织部部长刘静俭一行莅临我校调研指导党建工作</a></p>
+               <p><a href="#">[11-30] 共青科技职业学院喜获2017年全国民办高校学生工作创新奖</a></p>
+               <p><a href="#">[11-30] 共青科技职业学院举行2017年国家奖、助学金发放仪式</a></p>
+               <p><a href="#">[11-27] 我校艺术学院徐頔国画作品获全国“文化双拥贡献奖”</a></p>
+               <a href="#" style="padding-left: 300px;">&gt;&gt;更多新闻</a>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-6">
+			    <div class="thumbnail">
+			      <div class="caption">
+              <h1>通告公告</h1>
+              <br/>
+               <p><a href="#">[12-07] 高校党的十九大精神学习交流座谈会在共青科技职业学院举行</a></p>
+               <p><a href="#">[12-04] 我校师生在国际残疾人日举行爱心募捐并观看残疾人艺术团演出</a></p>
+               <p><a href="#">[12-03] 江西省委教育工委组织部部长刘静俭一行莅临我校调研指导党建工作</a></p>
+               <p><a href="#">[11-30] 共青科技职业学院喜获2017年全国民办高校学生工作创新奖</a></p>
+               <p><a href="#">[11-30] 共青科技职业学院举行2017年国家奖、助学金发放仪式</a></p>
+               <p><a href="#">[11-27] 我校艺术学院徐頔国画作品获全国“文化双拥贡献奖”</a></p>
+               <p><a href="#">[11-17] 我校举行党的十九大精神宣讲报告会</a></p> 
+            </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-6">
+			    <div class="thumbnail">
+			      <div class="caption">
+              <h1>教育教学</h1>
+              <br/>
+               <p><a href="#">[12-07] 高校党的十九大精神学习交流座谈会在共青科技职业学院举行</a></p>
+               <p><a href="#">[12-04] 我校师生在国际残疾人日举行爱心募捐并观看残疾人艺术团演出</a></p>
+               <p><a href="#">[12-03] 江西省委教育工委组织部部长刘静俭一行莅临我校调研指导党建工作</a></p>
+               <p><a href="#">[11-30] 共青科技职业学院喜获2017年全国民办高校学生工作创新奖</a></p>
+               <p><a href="#">[11-30] 共青科技职业学院举行2017年国家奖、助学金发放仪式</a></p>
+               <p><a href="#">[11-27] 我校艺术学院徐頔国画作品获全国“文化双拥贡献奖”</a></p>
+               <p><a href="#">[11-17] 我校举行党的十九大精神宣讲报告会</a></p> 
+            </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-6">
+			    <div class="thumbnail">
+			      <div class="caption">
+              <h1>招生就业</h1>
+              <br/>
+               <p><a href="#">[12-07] 高校党的十九大精神学习交流座谈会在共青科技职业学院举行</a></p>
+               <p><a href="#">[12-04] 我校师生在国际残疾人日举行爱心募捐并观看残疾人艺术团演出</a></p>
+               <p><a href="#">[12-03] 江西省委教育工委组织部部长刘静俭一行莅临我校调研指导党建工作</a></p>
+               <p><a href="#">[11-30] 共青科技职业学院喜获2017年全国民办高校学生工作创新奖</a></p>
+               <p><a href="#">[11-30] 共青科技职业学院举行2017年国家奖、助学金发放仪式</a></p>
+               <p><a href="#">[11-27] 我校艺术学院徐頔国画作品获全国“文化双拥贡献奖”</a></p>
+               <p><a href="#">[11-17] 我校举行党的十九大精神宣讲报告会</a></p> 
+            </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+<div class="col-sm-3" style="margin-top:80px;">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" class="collapsed texthover" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+          <span class="glyphicon glyphicon glyphicon-phone-alt"></span>教务系统
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed texthover" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <span class="glyphicon glyphicon glyphicon-send"></span>网上缴费 
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed texthover" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <span class="glyphicon glyphicon glyphicon-flag"></span>党建网 
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed texthover" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <span class="glyphicon glyphicon glyphicon-leaf"></span>校友网 
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" >
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a class="collapsed texthover" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <span class="glyphicon glyphicon glyphicon-home"></span>校园门户 
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFive">
+      <h4 class="panel-title">
+        <a class="collapsed texthover" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          <span class="glyphicon glyphicon glyphicon-book"></span>图书馆  
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingSix">
+      <h4 class="panel-title">
+        <a class="collapsed texthover" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          <span class="glyphicon glyphicon glyphicon-envelope"></span>书记邮箱  
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingseven">
+      <h4 class="panel-title">
+        <a class="collapsed texthover" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+          <span class="glyphicon glyphicon glyphicon-pencil"></span>校长邮箱 
+        </a>
+      </h4>
+    </div>
+    <div id="collapseseven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="panel panel-default">
+    <div class="panel-heading " role="tab" id="headingseven">
+      <h4 class="panel-title ">
+        <a class="collapsed texthover" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
+          <span class="glyphicon glyphicon glyphicon glyphicon-plane"></span>快速链接 
+        </a>
+      </h4>
+    </div>
+    <div id="collapseeight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        <p><a href="#">校园服务</a></p>
+        <p><a href="#">学习身边经典</a></p>
+        <p><a href="#">教师在线学习</a></p>
+        <p><a href="#">经营中心</a></p>
+        <p><a href="#">财务查询</a></p>
+        <p><a href="#">一卡通查询</a></p>
+        <p><a href="#">安全保卫</a></p>
+        <p><a href="#">后勤在线</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+  <div class="content">
+    <div class="leftlogo">
+      <h1>共青科技职业学院</h1>
+      <span>GONGQING INSTITUTE OF SCIENCE AND TECHNOLOGY</span>
+    </div>
+    <div class="rightlogo">
+      <address>Copyright&copy;1999-2017 共青科技职业学院 赣ICP备12004272号-3</address>
+      <p>咨询电话：0792-4372788&nbsp;4377296&nbsp;传真：0792-4372180 <br>邮编：332020</p>
+      <address>江西省共青城市共青大道1号</address>
+    </div>
+  </div>
+</footer>
+  </div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	
+</script>
+</body>
+</html>
